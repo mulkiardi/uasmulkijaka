@@ -1,7 +1,7 @@
 # Tguas Besar Web 3
 
 **Anggota**
-- Jaka Pranduga
+- Jaka Panduga Rusmana
 - Mulki Ardi
 
 **Dokumentasi API**
