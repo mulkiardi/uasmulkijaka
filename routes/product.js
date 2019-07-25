@@ -4,6 +4,12 @@ const router = express.Router();
 
 const productController = require('../controllers/product');
 
-router.get('/', productController.getIndexProduct);
+const auth = require('../configs/auth');
+
+router.get('/', auth.verivyToken, productController.getIndex);
+
+router.post('/add', auth.verivyToken, productController.postProduct); //materi
+
+router.put('/:id', productController.putProduct); //materi
 
 module.exports = router;
