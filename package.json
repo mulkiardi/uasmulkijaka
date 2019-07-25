@@ -1,7 +1,7 @@
 {
-  "name": "my-application",
+  "name": "uasmulkijaka",
   "version": "1.0.0",
-  "description": "Node Express Application Template for Teaching Purpose",
+  "description": "Uas Web 3",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -11,7 +11,7 @@
     "node",
     "express"
   ],
-  "author": "Charel",
+  "author": "JakaMulki",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

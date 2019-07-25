@@ -65,12 +65,10 @@ module.exports.postBook = (req, res) => {
                 error_message: err
             })
         } else {
-            if (userData.roles == 'admin' || userData.roles == 'Admin') {
+            if (userData.role == 'admin' || userData.role == 'Admin') {
                 Book.create({
-                    judul: req.body.judul,
-                    pengarang: req.body.pengarang,
-                    penerbit: req.body.penerbit,
-                    tahun_terbit: req.body.tahun_terbit
+                    name: req.body.name,
+                    price: req.body.price
                 }).then(buku => res.status(201).json({
                     message: 'Berhasil menyimpan',
                     data: buku
@@ -96,12 +94,10 @@ module.exports.putBook = (req, res) => {
                 error_message: err
             })
         } else {
-            if (userData.roles === 'admin' || userData.roles === 'Admin') {
+            if (userData.role === 'admin' || userData.role === 'Admin') {
                 Book.update({
-                    judul: req.body.judul,
-                    pengarang: req.body.pengarang,
-                    penerbit: req.body.penerbit,
-                    tahun_terbit: req.body.tahun_terbit
+                    name: req.body.name,
+                    price: req.body.price
                 }, {
                     where: {
                         id: req.params.id
@@ -138,7 +134,7 @@ module.exports.deleteBook = (req, res) => {
                 error_message: err
             })
         } else {
-            if (userData.roles === 'admin' || userData.roles === 'Admin') {
+            if (userData.role === 'admin' || userData.role === 'Admin') {
                 Book.destroy({
                     where: {
                         id: req.params.id
@@ -174,8 +170,8 @@ module.exports.orderBook = (req, res) => {
             for (let i = 0; i < req.body.books.length; i++) {
                 values[i] = {
                     tgl_order: new Date(),
-                    UserId: userData.id,
-                    BookId: req.body.books[i]
+                    userId: userData.id,
+                    bookId: req.body.books[i]
                 }
             }
 

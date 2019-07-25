@@ -8,8 +8,7 @@ const books = require('../models/book');
 class Order extends Sequelize.Model {}
 
 Order.init({
-  name: Sequelize.STRING,
-  price: Sequelize.INTEGER
+  tgl_order: Sequelize.DATE,
 }, { sequelize, modelName: 'orders' });
 
 Order.belongsTo(user);

@@ -57,7 +57,6 @@ module.exports.postUserRegister = (req, res) => {
             defaults: {
                 username: req.body.username,
                 email: req.body.email,
-                email: req.body.email,
                 password: hash,
                 roles: req.body.roles
             }
