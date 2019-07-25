@@ -13,7 +13,7 @@ const sequelize = require('./configs/sequelize');
 
 const Product = require('./models/product');
 const Book = require('./models/book');
-const Publiser = require('./models/publiser');
+const Publiser = require('./models/publisher');
 
 app.use(homeRouter);
 app.use('/product', productRouter);
